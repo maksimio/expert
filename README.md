@@ -11,6 +11,7 @@
 `rails destroy model User` - откат назад
 `rails generate scaffold User name:string email:string` - генерация полного ресурса (модель + контроллер)
 `rails routes` - проверка состава путей
+    
 
 `rake db:migrate` - миграция
 `raket db:seed` - заполнение БД из файла seeds.rb
