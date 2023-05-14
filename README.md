@@ -1,3 +1,4 @@
+# Команды
 `rails s` - старт сервера разработки
 `rails c` - консоль локального доступа
 `bundler update` - обновление
@@ -11,4 +12,7 @@
 `rails generate scaffold User name:string email:string` - генерация полного ресурса (модель + контроллер)
 `rails routes` - проверка состава путей
 
+`rake db:migrate` - миграция
 
+# Пути
+`/users` - информация о пользователях
