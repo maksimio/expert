@@ -282,6 +282,7 @@ DEPENDENCIES
   html2haml
   importmap-rails
   jbuilder
+  jquery-rails
   jquery-ui-rails
   kaminari
   puma (~> 5.0)
