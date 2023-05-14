@@ -9,6 +9,6 @@
 `rails generate model User name:string email:string` - модель
 `rails destroy model User` - откат назад
 `rails generate scaffold User name:string email:string` - генерация полного ресурса (модель + контроллер)
-
+`rails routes` - проверка состава путей
 
 

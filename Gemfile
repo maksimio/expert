@@ -70,3 +70,15 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+
+gem 'haml-rails', '~> 2.0'
+gem 'html2haml'
+gem 'jquery-ui-rails'
+gem 'rails-asset-jqueryui'
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+gem 'font-awesome-rails'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'kaminari'
