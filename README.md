@@ -13,6 +13,7 @@
 `rails routes` - проверка состава путей
 
 `rake db:migrate` - миграция
+`raket db:seed` - заполнение БД из файла seeds.rb
 
 # Пути
 `/users` - информация о пользователях
