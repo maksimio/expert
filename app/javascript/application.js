@@ -5,5 +5,3 @@ import "controllers"
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-import * as jQuery from 'jquery';
-window.$ = jQuery;
