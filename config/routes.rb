@@ -32,5 +32,4 @@ Rails.application.routes.draw do
     match 'prev_image',     to: 'api#prev_image',       via: :get
     match 'save_value',     to: 'api#save_value',       via: :get
   end
-
 end

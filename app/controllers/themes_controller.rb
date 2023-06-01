@@ -7,8 +7,7 @@ class ThemesController < ApplicationController
   end
 
   # GET /themes/1 or /themes/1.json
-  def show
-  end
+  def show; end
 
   # GET /themes/new
   def new
@@ -16,8 +15,7 @@ class ThemesController < ApplicationController
   end
 
   # GET /themes/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /themes or /themes.json
   def create
@@ -25,7 +23,7 @@ class ThemesController < ApplicationController
 
     respond_to do |format|
       if @theme.save
-        format.html { redirect_to theme_url(@theme), notice: "Theme was successfully created." }
+        format.html { redirect_to theme_url(@theme), notice: 'Theme was successfully created.' }
         format.json { render :show, status: :created, location: @theme }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +36,7 @@ class ThemesController < ApplicationController
   def update
     respond_to do |format|
       if @theme.update(theme_params)
-        format.html { redirect_to theme_url(@theme), notice: "Theme was successfully updated." }
+        format.html { redirect_to theme_url(@theme), notice: 'Theme was successfully updated.' }
         format.json { render :show, status: :ok, location: @theme }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +50,7 @@ class ThemesController < ApplicationController
     @theme.destroy
 
     respond_to do |format|
-      format.html { redirect_to themes_url, notice: "Theme was successfully destroyed." }
+      format.html { redirect_to themes_url, notice: 'Theme was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

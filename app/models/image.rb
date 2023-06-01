@@ -5,14 +5,14 @@ class Image < ApplicationRecord
   belongs_to :theme
 
   # get images array of arrays by given theme_id
-  scope :theme_images, ->(theme_id) { select('id', 'name', 'file', 'ave_value').where(theme_id: theme_id) }
+  scope :theme_images, ->(theme_id) { select('id', 'name', 'file', 'ave_value').where(theme_id:) }
 
   # find image by id
   scope :find_image, ->(image_id) { find(image_id) }
 
   def self.recalculate_avg_value(image_id, ave_value)
     image = find(image_id)
-    image.update(ave_value: ave_value)
+    image.update(ave_value:)
   end
 
   def self.show_valued_image(new_value_data)
@@ -23,13 +23,13 @@ class Image < ApplicationRecord
     values_qty = Value.all.count.round
     common_avg_value = user_valued == 1 ? find(image_id).ave_value.round : 0
 
-    data = { values_qty: values_qty,
-      current_user_id: current_user_id,
-      theme_id: theme_id,
-      image_id: image_id,
-      user_valued: user_valued,
-      value: value,
-      common_avg_value: common_avg_value }
+    data = { values_qty:,
+             current_user_id:,
+             theme_id:,
+             image_id:,
+             user_valued:,
+             value:,
+             common_avg_value: }
     logger.info "In show_valued_image: #{data.inspect} "
     data
   end

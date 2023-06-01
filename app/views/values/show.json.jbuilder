@@ -1,1 +1,1 @@
-json.partial! "values/value", value: @value
+json.partial! 'values/value', value: @value

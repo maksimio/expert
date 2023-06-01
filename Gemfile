@@ -36,9 +36,9 @@ gem 'font-awesome-sass'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'rails-asset-jqueryui'
 gem 'kaminari'
 gem 'pg'
+gem 'rails-asset-jqueryui'
 gem 'rdoc'
 gem 'sass-rails'
 gem 'slim'
@@ -56,19 +56,19 @@ gem 'redis'
 
 gem 'rspec'
 
-gem 'tzinfo-data', platforms: %i[ mingw mswin x64_mingw jruby ]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'bootsnap', require: false
 
-gem "active_model_serializers", require: true
+gem 'active_model_serializers', require: true
 
 gem 'bundler-audit'
-gem 'simplecov', :require => false
 gem 'rubocop', require: false
 gem 'rubocop-rspec', '~> 1.32.0', require: false
+gem 'simplecov', require: false
 
 group :development, :test do
-  gem 'debug', platforms: %i[ mri mingw x64_mingw ]
+  gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do

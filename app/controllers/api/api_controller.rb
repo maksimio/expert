@@ -24,7 +24,7 @@ module Api
           format.json {}
         else
           format.html { render display_theme_path, status: :successfully }
-          format.json {
+          format.json do
             render json:
                                 { new_image_index: next_image_data[:index],
                                   name: next_image_data[:name],
@@ -34,8 +34,8 @@ module Api
                                   common_avg_value: next_image_data[:common_avg_value],
                                   value: next_image_data[:value],
                                   status: :successfully,
-                                  notice: 'Successfully listed to next'}
-          }
+                                  notice: 'Successfully listed to next' }
+          end
         end
       end
     end
@@ -54,7 +54,7 @@ module Api
           format.json {}
         else
           format.html { render display_theme_path, status: :successfully }
-          format.json {
+          format.json do
             render json: { new_image_index: prev_image_data[:index],
                            name: prev_image_data[:name],
                            file: prev_image_data[:file],
@@ -63,7 +63,8 @@ module Api
                            common_avg_value: prev_image_data[:common_avg_value],
                            value: prev_image_data[:value],
                            status: :successfully,
-                           notice: 'Successfully listed to previous'} }
+                           notice: 'Successfully listed to previous' }
+          end
         end
       end
     end
@@ -72,23 +73,25 @@ module Api
     #   then - start to calculate average value
     def save_value
       value = params[:value].to_i
-      new_value_data = { user_id: current_user.id, image_id: params[:image_id].to_i, value: value }
+      new_value_data = { user_id: current_user.id, image_id: params[:image_id].to_i, value: }
       valued_image_data = Image.value_and_update(new_value_data)
 
       respond_to do |format|
         if value.blank?
           format.html { render nothing: true, status: :unprocessable_entity }
         else
-          format.json { render json:  {
-            user_value:       value,
-            values_qty:       valued_image_data[:values_qty],
-            image_id:         valued_image_data[:image_id],
-            user_valued:      valued_image_data[:user_valued],
-            common_avg_value: valued_image_data[:common_avg_value],
-            value:            valued_image_data[:value],
-            status:           :successfully,
-            notice:           'Successfully saved'}
-          }
+          format.json do
+            render json: {
+              user_value: value,
+              values_qty: valued_image_data[:values_qty],
+              image_id: valued_image_data[:image_id],
+              user_valued: valued_image_data[:user_valued],
+              common_avg_value: valued_image_data[:common_avg_value],
+              value: valued_image_data[:value],
+              status: :successfully,
+              notice: 'Successfully saved'
+            }
+          end
         end
       end
     end

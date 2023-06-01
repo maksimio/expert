@@ -1,7 +1,6 @@
-require_relative "boot"
+require_relative 'boot'
 
-require "rails/all"
-
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -15,7 +14,7 @@ module Expert
     config.i18n.fallbacks = true
     config.i18n.fallbacks = [:en]
     config.i18n.enforce_available_locales = true
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.svg)
+    config.assets.precompile += %w[*.png *.jpg *.jpeg *.gif *.svg]
     config.assets.enabled = true
 
     # Configuration for the application, engines, and railties goes here.

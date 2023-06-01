@@ -7,8 +7,7 @@ class ValuesController < ApplicationController
   end
 
   # GET /values/1 or /values/1.json
-  def show
-  end
+  def show; end
 
   # GET /values/new
   def new
@@ -16,8 +15,7 @@ class ValuesController < ApplicationController
   end
 
   # GET /values/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /values or /values.json
   def create
@@ -25,7 +23,7 @@ class ValuesController < ApplicationController
 
     respond_to do |format|
       if @value.save
-        format.html { redirect_to value_url(@value), notice: "Value was successfully created." }
+        format.html { redirect_to value_url(@value), notice: 'Value was successfully created.' }
         format.json { render :show, status: :created, location: @value }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +36,7 @@ class ValuesController < ApplicationController
   def update
     respond_to do |format|
       if @value.update(value_params)
-        format.html { redirect_to value_url(@value), notice: "Value was successfully updated." }
+        format.html { redirect_to value_url(@value), notice: 'Value was successfully updated.' }
         format.json { render :show, status: :ok, location: @value }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,13 +50,13 @@ class ValuesController < ApplicationController
     @value.destroy
 
     respond_to do |format|
-      format.html { redirect_to values_url, notice: "Value was successfully destroyed." }
+      format.html { redirect_to values_url, notice: 'Value was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-  
+
   # Use callbacks to share common setup or constraints between actions.
   def set_value
     @value = Value.find(params[:id])

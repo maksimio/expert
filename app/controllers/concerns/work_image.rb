@@ -23,9 +23,7 @@ module WorkImage
     if user_valued == 1
       common_avg_value = Image.find_image(image_id).ave_value
       logger.info "In 1show_image: common_avg_value = #{common_avg_value.inspect} "
-      if common_avg_value.blank?
-        common_avg_value = 0
-      end
+      common_avg_value = 0 if common_avg_value.blank?
       common_avg_value.round unless common_avg_value.blank?
       logger.info "In 2show_image: common_avg_value = #{common_avg_value.inspect} "
     else
@@ -33,16 +31,16 @@ module WorkImage
     end
 
     data = { index: image_index,
-             values_qty: values_qty,
-             current_user_id: current_user_id,
-             theme_id: theme_id,
+             values_qty:,
+             current_user_id:,
+             theme_id:,
              images_arr_size: theme_images.size,
-             image_id: image_id,
+             image_id:,
              name: one_image_attr['name'],
              file: one_image_attr['file'],
-             user_valued: user_valued,
-             value: value,
-             common_avg_value: common_avg_value }
+             user_valued:,
+             value:,
+             common_avg_value: }
     logger.info "In show_image:  data = #{data.inspect} "
     data
   end
@@ -63,7 +61,4 @@ module WorkImage
     index > 0 ? new_index -= 1 : new_index = length - 1
     new_index
   end
-
-
-
 end
