@@ -54,9 +54,18 @@ gem 'redis'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'rspec'
+
 gem 'tzinfo-data', platforms: %i[ mingw mswin x64_mingw jruby ]
 
 gem 'bootsnap', require: false
+
+gem "active_model_serializers", require: true
+
+gem 'bundler-audit'
+gem 'simplecov', :require => false
+gem 'rubocop', require: false
+gem 'rubocop-rspec', '~> 1.32.0', require: false
 
 group :development, :test do
   gem 'debug', platforms: %i[ mri mingw x64_mingw ]

@@ -19,4 +19,4 @@ test:
 production:
   <<: *default
   database: expert_production
-  password: <%= ENV['EXERCISE_DATABASE_PASSWORD'] %>
+  password: rails
