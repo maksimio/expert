@@ -1,0 +1,55 @@
+@import "mixins"
+
+#logo
+  float: left
+  margin-right: 10px
+  font-size: 1.7em
+  color: #c4f7ff
+  letter-spacing: -1px
+  padding-top: 9px
+  font-weight: bold
+
+  &:hover
+    color: #337ab7
+    text-decoration: none
+
+.container.header
+  height: 50%
+  top: .35em
+  position: relative
+
+li.logged
+  color: white
+  font-weight: bold
+  margin-top: 10px
+  font-size: 26px
+
+  .gravatar-logged
+    height: 50%
+    width: 50%
+
+.navbar
+  background: $main
+
+.dropdown
+  display: inline-block
+  position: relative
+
+.dropdown-content
+  display: none
+  position: absolute
+  width: 100%
+  overflow: auto
+
+.dropdown:hover .dropdown-content
+  display: block
+
+.dropdown-content a
+  display: block
+  color: #000000
+  padding: 5px
+  text-decoration: none
+
+.dropdown-content a:hover
+  color: $main
+  background-color: $text

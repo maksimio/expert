@@ -1,0 +1,74 @@
+ru:
+  shared:
+    header:
+      home: "Главная"
+      sign_in: "Войти"
+      sign_out: "Выйти"
+      profile: "Профиль"
+      settings: "Настройки"
+    footer:
+      about: "О сайте"
+      contact: "Контакты"
+      dev_msg: "WIP"
+      help: "Помощь"
+
+  sessions:
+    new:
+      sign_in: "Войти"
+      sign_up: "Зарегистрироваться"
+      email: "E-mail"
+      password: "Пароль"
+      new_user?: "Новый пользователь?"
+
+  users:
+    form:
+      name: "Имя пользователя"
+      email: "E-mail"
+      password: "Пароль"
+      password_confirm: "Подтверждение пароля"
+      create_account: "Создайть аккаунт"
+    new:
+      new_user_sign_up: "Регистрация нового пользователя"
+      back: "Назад"
+    show:
+      work: "К оценке"
+      email: "Email"
+
+  work:
+    index:
+      def_select_theme: "Выберите тему для оценки"
+    button_theme_select:
+      select_theme_bt: "Выбрать тему"
+    button_list_results:
+      results_list: "Результаты"
+    choose_theme_from_arr:
+      select_theme: "Выберите тему"
+    display_theme:
+      select_theme: "Выберите тему для оценки"
+    choose_theme:
+      select_theme: "Выберите тему"
+    images:
+      common_value: "Средняя оценка"
+      total_values: "Всего оценок"
+      make_decision: "Ваша оценка:"
+      save_decision: "Сохранить"
+      theme_name: "Тема"
+    results_list:
+      no_values: "Результаты по выбранной теме отсутствуют..."
+      select_theme: "Выберите другую тему"
+      return_to_main: "На главную"
+      page_title: "Перейдите к выбору темы"
+      all_values: "Все оценки экспертов для данной темы"
+      description: "Описание"
+      image: "Изображение"
+      value: "Средняя оценка"
+      date: "Дата оценки"
+
+  main:
+    index:
+      to_work: "Оценить"
+      to_sign_up: "Регистрация"
+    about:
+      about_title: "О сайте"
+    contacts:
+      contacts_title: "Контакты"

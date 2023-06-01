@@ -1,14 +1,16 @@
+<!--This is what happens when you remove tourbolinks-->
 <%= stylesheet_link_tag 'application', media: 'all' %>
 
 <script type = "text/javascript" src = "https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
 
-    $('.image .image_display .image_diag').css({"display": "none"});
+    $('.image .image_display .estimate').css({"display": "none"});
     $('.img-left-side').css({"display": "none"});
     $('.img-right-side').css({"display": "none"});
 
-    console.log('Подгрузка choose_theme.html.erb')
+
+    // to check whether the target is the content-area itself or a child of the content-area.
 
     $(document).click(function(e){
         if($(e.target).is(".select_theme") ||

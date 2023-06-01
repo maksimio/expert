@@ -1,2 +1,12 @@
-%h1 Main#index
-%p Find me in app/views/main/index.html.haml
+- content_for(:title, "Index")
+
+.center
+  %h1
+    Добро пожаловать в Expert
+  %h2
+    Получите возможность оценить пользовательские интерфейсы
+
+  - if signed_in?
+    = link_to t('.to_work'), work_path, class: "btn btn-lg btn-primary"
+  -else
+    = link_to t('.to_sign_up'), signup_path, class: "btn btn-lg btn-primary"

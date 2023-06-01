@@ -1,0 +1,490 @@
+@import "mixins"
+
+i
+  height: 1em
+  font-size: 1em
+
+i:hover:not(:disabled)
+  cursor: pointer
+  color: $text
+  h2.up
+    color: $purple
+
+
+button
+  color: $button-color
+  background-color: $button-color
+  text-decoration: $main
+  text-shadow: rgba(13, 178, 159, 0.24)
+  font-size: 1.25em
+
+
+//$image_heigt: 150px
+.button__left
+  display: block
+  border-radius: 4px
+  height: 3em
+  background: $button-color
+  width: 80%
+  position: relative
+  left: 10%
+  border: rgba(255, 255, 255, 0.70)
+  //margin-top: 1.2em
+  text-align: center
+  //text-shadow: rgba(13, 178, 159, 0.24)
+
+  .modalBtn
+    margin-top: .1em
+
+  .theme
+    margin-top: 1.2em
+
+
+.button__choose
+  //border-radius: 15px
+  color: #82A1C4
+  height: 2.2em
+  box-shadow: 3px 3px 4px #ACC9E5
+  background: rgba(222, 165, 242, 0.29)
+  width: 60%
+  //position: relative
+  text-align: center
+  //left: 10%
+  border: rgba(219, 255, 219, 0.70)
+  padding: 0 10px
+  margin-bottom: 1.5em
+  font-size: 1.1em
+
+
+.button__results.save
+  border-radius: 55px
+  height: 2.5em
+  box-shadow: 3px 3px 4px #989BB0
+  background: rgba(209, 211, 141, 0.4)
+  width: 20%
+  border: rgba(255, 255, 255, 0.70)
+  margin-top: .5em
+  display:  block 
+  cursor: auto
+  text-decoration: none
+  float: left
+  margin-left: 8em
+  margin-bottom: .6em
+
+  a
+    text-shadow: 0 -1px 1px #4aa5cf
+    text-decoration: none
+    color: #4863be
+    position: relative
+    text-align: center
+
+
+.button__results.save:hover:not(:disabled)
+  background: #badde4
+  a
+    text-decoration: none
+
+
+.image
+  $img-small-height: 1.1em
+
+  .left_controls
+    border-radius: 10px
+    display: block
+    background: $main
+    color: gray
+    height: 45em
+    width: 100%
+    margin-top: 2em
+
+    span.common_value, .total_values
+      text-align: center
+      position: relative
+      color: white
+      font-size: 1.4em
+      font-weight: bold
+      top: 4em
+      display: none
+      height: 3em
+
+      h2
+        border-radius: 10px
+        text-align: center
+        font-weight: bold
+        font-size: large
+        display: inline-block
+
+
+      h2.common
+        width: 45px
+        padding-top: 10px
+        padding-bottom: 10px
+
+    span.total_values
+      display: block
+
+      h2.total
+        width: inherit //45px
+        padding: .5em
+
+    input.load_image
+      color: gray
+
+    select#theme
+      margin-bottom: 10px
+
+    .select_theme
+      display: block
+      padding-top: 10px
+
+      .form_select
+        display: block
+        color: #3b519c
+        width: 80%
+        height: 6em
+        position: relative
+        text-align: center
+        left: 11%
+        font-size: 1.5em
+
+        input
+          color: #3475BE
+          background: rgba(222, 165, 242, 0)
+          padding: 0
+          font-size: .9em
+          height: 1.5em
+          -webkit-transition: background-color 0.3s ease-in-out
+          -moz-transition: background-color 0.3s ease-in-out
+          -o-transition: background-color 0.3s ease-in-out
+          transition: background-color 0.3s ease-in-out
+          cursor: pointer
+
+    .select_image
+      display: block
+      height: 10em
+      margin-top: .1em
+
+      .form_select
+        display: block
+        color: #4863be
+        width: 80%
+        height: 5.5em
+        position: relative
+        text-align: center
+        left: 11%
+        font-size: 1.5em
+        margin-top: 2.5em
+
+        input
+          color: #3475BE
+          background: rgba(222, 165, 242, 0)
+          padding: 0
+          font-size: .9em
+          height: 1.5em
+          -webkit-transition: background-color 0.3s ease-in-out
+          -moz-transition: background-color 0.3s ease-in-out
+          -o-transition: background-color 0.3s ease-in-out
+          transition: background-color 0.3s ease-in-out
+          cursor: pointer
+
+
+    .image_input_form
+      height: 18em
+      font-size: 1.5em
+      color: #4863be
+      display: block
+      position: relative
+      width: 80%
+      text-align: center
+      left: 11%
+      margin-top: 1.5em
+
+      input
+        color: #3475BE
+        background-color: #F5F5F5
+        padding: 0
+        font-size: .9em
+        height: 1.5em
+        -webkit-transition: background-color 0.3s ease-in-out
+        -moz-transition: background-color 0.3s ease-in-out
+        -o-transition: background-color 0.3s ease-in-out
+        transition: background-color 0.3s ease-in-out
+        cursor: text
+
+      .file_url
+        padding: 0
+        position: relative
+        margin-bottom: 1.15em
+        opacity: 0.4
+
+        input
+          background-color: #F5F5F5
+
+      .file_url:hover
+        opacity: 1
+
+      .file_device
+        padding: 0
+        position: relative
+        opacity: 0.4
+
+        input
+          background-color: #F5F5F5
+      .file_device:hover
+        opacity: 1
+
+
+      .button__choose input
+        background-color: rgba(222, 165, 242, 0)
+        cursor: pointer
+
+
+    .select_image_hide
+      display: none
+
+    a
+      //-webkit-appearance: button
+      //-moz-appearance: button
+      //appearance: button
+      text-shadow: 0 -1px 1px #4aa5cf
+      text-decoration: none
+      color: #4863be
+
+
+  .image_display
+    border-radius: 10px
+    position: relative
+    //margin: 0 0 10px 0
+    height: 45em
+    background: $main
+    color: gray
+    margin-top: 2em
+
+
+    h2.up-theme
+      color: $text
+      margin: 10px
+      height: 2.1em
+      font-size: 2em
+
+    h2.up
+      text-align: left
+      color: $purple
+      cursor: default
+      position: relative
+      left: 8%
+      width: 82%
+      margin: 15px 5px 5px
+      font-size: 1.6em
+
+    .img-left-side
+      display: none
+      margin-left: 1.35em
+      //@include span-columns(2)
+      //position: relative
+      //height: 300px
+      //float: left
+      &hover
+        background-color: #9bb2fc
+    h3
+      color: #2094a6
+      text-align: center
+      text-shadow: rgba(13, 178, 159, 0.24)
+      font-size: 2.6em
+
+    .img-right-side
+      display: none
+      margin-left: -70%
+
+    @-webkit-keyframes fadeIn
+      from
+        opacity: 0.3
+      to
+        opacity: 1
+
+    @keyframes fadeIn
+      from
+        opacity: 0.3
+      to
+        opacity: 1
+
+    @-webkit-keyframes displayIn
+      from
+        display: none
+      to
+        display: block
+
+    @keyframes displayIn
+      from
+        display: none
+      to
+        display: block
+
+
+    .img-center
+      opacity: 1
+      position: relative
+      text-align: center
+      object-fit: fill
+      height: 34em
+
+      .img-title
+        display: none
+
+      h2.up
+        color: #555fbe
+      .img-title
+        display: block
+        box-sizing: content-box
+        color: #c3ffff
+        position: absolute
+        top: 2em
+        margin: 0
+        height: 100%
+        text-align: center
+        font-size: 2.7em
+        line-height: 3em
+
+    .image_user_value
+      text-align: center
+      color: #ffffff
+      font-weight: bold
+      font-size: 40px
+      font-size: large
+      padding-top: 1em
+      display: none
+      left: 45%
+      top: -5%
+      width: 100px
+      border-radius: 5px
+      position: relative
+
+    .estimate
+      display: none
+      position: relative
+      border-radius: 10px
+      background: $main
+      height: 8.6em
+      color: white
+      text-align: center
+      top: 3.65em
+
+      .indicator
+        background: #deb2ad
+        text-align: center
+
+        .outer-circle
+          display: none
+
+          left: 10.5%
+          border: 25px solid #ECEBFA
+          width: 30px
+          height: 30px
+          border-radius: 25px
+          position: relative
+
+          &:hover
+            -webkit-box-shadow: 0 0 30px 15px #453D9B
+            -moz-box-shadow: 0 0 30px 15px #453D9B
+            box-shadow: 0 0 30px 15px #453D9B
+
+        .outer-circle.show
+          display: block
+          border-radius: 30px
+          border: 30px solid #30fa29
+          left: 43.75%
+
+
+      h2.down
+        color: #555fbe
+        display: block
+        font-size: 2em
+        margin-left: 1em
+        margin-bottom: 0
+        float: left
+        margin-top: .85em
+
+      .scale
+        display: none
+        width: 100%
+        background-color: lightgrey
+        line-height: .1em //$img-small-height
+        position: relative
+        top: .9em
+        background: linear-gradient(to right, rgba(247, 27, 27, 0.68), rgba(165, 165, 0, 0.68), rgba(27, 247, 27, 0.68))
+
+        .small_img_box
+          display: block
+          width: 1.35em
+          height: 100%
+          left: 20.75%
+          vertical-align: top
+          background-color: #b5d31c
+          position: relative
+          padding: 0
+          margin: 0
+          %img
+            display: none
+            vertical-align: top
+            height: 100%
+            line-height: $img-small-height
+            padding: 0
+            margin: 0
+
+
+.results_list
+  position: relative
+  margin: .7em auto auto
+  padding: .4em
+  color: #000055
+  width: 95%
+  background-color: #f9eddb
+  box-shadow: 0 0 10px 1px rgba(79, 130, 128, 0.1)
+  border: 1px solid #CACAE2
+  border-radius: .5em
+  h2
+    font-size: 2.3em
+
+  nav span
+    font-size: 1.3em
+    text-shadow: 1px 1px 13px rgb(60, 10, 235)
+
+
+a.btn.btn-lg.btn-primary
+  margin-left: 1.7em
+  margin-top: 1em
+
+.pagination
+  position: relative
+  left: 55%
+  margin: 0
+  font-size: 1.5em
+
+table
+  border-collapse: collapse
+  margin: 0.75em 1.5em
+  //table-layout: auto //fixed; */
+  width: 95%
+  position: relative
+  left: 3%
+  tr > td
+    margin-top: 2.1em
+
+  tbody
+    margin-left: 0.5em
+    margin-right: 0.5em
+
+
+tr.one_row > td
+  padding-bottom: 1em
+  font-size: 1.5em
+
+  th
+    text-align: center
+  //width: 75em
+  td
+    font-size: 1.5em
+
+//th.name
+//  width: 14em
+

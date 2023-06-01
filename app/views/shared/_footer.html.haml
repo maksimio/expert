@@ -1,2 +1,14 @@
-%p
-  ='Footer'
+%footer.footer
+  %h3
+    Методики разработки современных WEB-приложений | Лопатин Максим
+
+  .footer_menu
+    %nav
+      %ul
+        %li= link_to t('.help'), main_help_path
+        %li=link_to t('.about'), about_path
+        %li=link_to t('.contact'), contacts_path
+      %div.locale{:style => "padding-top:10px"}
+        = link_to image_tag("Ru.jpg", alt: "", style: "width: 5%; height: 5%", title: "Русский"), locale: :ru
+        = link_to image_tag("Uk.jpg", alt: "", style: "width: 5%; height: 5%", title: "English"), locale: :en
+        = I18n.locale

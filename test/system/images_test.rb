@@ -14,7 +14,7 @@ class ImagesTest < ApplicationSystemTestCase
     visit images_url
     click_on "New image"
 
-    fill_in "Ave value", with: @image.ave_value
+    fill_in "Avg value", with: @image.ave_value
     fill_in "File", with: @image.file
     fill_in "Name", with: @image.name
     fill_in "Theme", with: @image.theme_id
@@ -28,7 +28,7 @@ class ImagesTest < ApplicationSystemTestCase
     visit image_url(@image)
     click_on "Edit this image", match: :first
 
-    fill_in "Ave value", with: @image.ave_value
+    fill_in "Avg value", with: @image.ave_value
     fill_in "File", with: @image.file
     fill_in "Name", with: @image.name
     fill_in "Theme", with: @image.theme_id

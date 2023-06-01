@@ -14,8 +14,8 @@ class ThemesTest < ApplicationSystemTestCase
     visit themes_url
     click_on "New theme"
 
+    fill_in "Items qty", with: @theme.qty_items
     fill_in "Name", with: @theme.name
-    fill_in "Qty items", with: @theme.qty_items
     click_on "Create Theme"
 
     assert_text "Theme was successfully created"
@@ -26,8 +26,8 @@ class ThemesTest < ApplicationSystemTestCase
     visit theme_url(@theme)
     click_on "Edit this theme", match: :first
 
+    fill_in "Items qty", with: @theme.qty_items
     fill_in "Name", with: @theme.name
-    fill_in "Qty items", with: @theme.qty_items
     click_on "Update Theme"
 
     assert_text "Theme was successfully updated"

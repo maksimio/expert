@@ -1,2 +1,10 @@
-%h1 Main#help
-%p Find me in app/views/main/help.html.haml
+- provide(:title, 'Help')
+
+%h1
+- if signed_in?
+  %h1
+    Здравствуйте, #{@current_user.name.inspect}
+
+.about-copy
+  %h2
+    В случае возникновения проблем обратитесь к владельцу сайта.

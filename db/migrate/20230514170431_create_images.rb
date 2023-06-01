@@ -3,7 +3,7 @@ class CreateImages < ActiveRecord::Migration[7.0]
     create_table :images do |t|
       t.string :name
       t.string :file
-      t.string :ave_value
+      t.float :ave_value
       t.integer :theme_id
 
       t.timestamps

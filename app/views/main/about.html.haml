@@ -1,2 +1,7 @@
-%h1 Main#about
-%p Find me in app/views/main/about.html.haml
+- provide(:title, 'About')
+
+%h1= t('.about_title')
+
+.about-copy
+  %h1
+    Сайт Expert проводит опросы, касающиеся дизайна интерфейсов и агрегирует их результаты для последующего анализа.
