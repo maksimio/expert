@@ -8,7 +8,8 @@ module WorkImage
     theme_images = Image.theme_images(theme_id)
 
     current_user_id = current_user.id
-    logger.info "In show_image: current_user_id = #{current_user_id.inspect} "
+    logger.info "theme_images: #{theme_images}"
+    logger.info "In show_image: current_user_id = #{current_user_id.inspect}, image_index = #{image_index} "
 
     one_image_attr = theme_images[image_index].attributes
     logger.info "In show_image: one_image_attr = #{one_image_attr.inspect} "
